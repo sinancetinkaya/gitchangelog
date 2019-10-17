@@ -1333,7 +1333,7 @@ def rest_py(data, opts={}):
         subject += " [%s]" % (", ".join(commit["authors"]), )
 
         entry = indent('\n'.join(textwrap.wrap(subject)),
-                       first="- ").strip() + "\n"
+                       first="{0}: ".format(commit["commit"].sha1_short)).strip() + "\n"
 
         if commit["body"]:
             entry += "\n" + indent(commit["body"])
