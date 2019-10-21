@@ -151,7 +151,9 @@ subject_process = (strip |
 ## Tags that will be used for the changelog must match this regexp.
 ##
 #tag_filter_regexp = r'^[0-9]+\.[0-9]+(\.[0-9]+)?$'
-tag_filter_regexp = r'^[0-9]+_[a-z0-9]+?$'
+
+# use APPNAME_DATE_LASTCOMMITHASH
+tag_filter_regexp = r'^.+_[0-9]{8}_[a-z0-9]{7}}?$'
 
 
 
